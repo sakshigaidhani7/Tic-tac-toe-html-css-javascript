@@ -93,26 +93,7 @@
   <div class="status" id="status">Player X's turn</div>
   <button class="reset-btn" id="resetBtn">Reset</button>
 
-  <script>
-    const cells = document.querySelectorAll('.cell');
-    const status = document.getElementById('status');
-    const resetBtn = document.getElementById('resetBtn');
-
-    let currentPlayer = 'x';
-    let gameActive = true;
-    let board = ['', '', '', '', '', '', '', '', ''];
-
-    const winningCombos = [
-      [0, 1, 2],
-      [3, 4, 5],
-      [6, 7, 8],
-      [0, 3, 6],
-      [1, 4, 7],
-      [2, 5, 8],
-      [0, 4, 8],
-      [2, 4, 6]
-    ];
-
+  
     function handleClick(e) {
       const index = e.target.getAttribute('data-index');
       if (board[index] !== '' || !gameActive) return;
